@@ -29,22 +29,23 @@ partial class AbmPersonasForm
     private void InitializeComponent()
     {
         edicionGrupo = new GroupBox();
-        button5 = new Button();
-        button4 = new Button();
-        comboBox1 = new ComboBox();
+        aceptarModificar = new Button();
+        aceptarBoton = new Button();
+        cancelarBoton = new Button();
+        TipoCelCombo = new ComboBox();
         label7 = new Label();
-        textBox7 = new TextBox();
+        NumeroText = new TextBox();
         label6 = new Label();
-        textBox6 = new TextBox();
+        CodAreaText = new TextBox();
         label5 = new Label();
-        textBox5 = new TextBox();
+        CodPaisText = new TextBox();
         label4 = new Label();
         label3 = new Label();
-        textBox3 = new TextBox();
+        NombreText = new TextBox();
         label2 = new Label();
-        textBox2 = new TextBox();
+        ApellidoText = new TextBox();
         label1 = new Label();
-        textBox1 = new TextBox();
+        DNIText = new TextBox();
         listaGrupo = new GroupBox();
         modificarBoton = new Button();
         borrarBoton = new Button();
@@ -59,22 +60,23 @@ partial class AbmPersonasForm
         // 
         // edicionGrupo
         // 
-        edicionGrupo.Controls.Add(button5);
-        edicionGrupo.Controls.Add(button4);
-        edicionGrupo.Controls.Add(comboBox1);
+        edicionGrupo.Controls.Add(aceptarModificar);
+        edicionGrupo.Controls.Add(aceptarBoton);
+        edicionGrupo.Controls.Add(cancelarBoton);
+        edicionGrupo.Controls.Add(TipoCelCombo);
         edicionGrupo.Controls.Add(label7);
-        edicionGrupo.Controls.Add(textBox7);
+        edicionGrupo.Controls.Add(NumeroText);
         edicionGrupo.Controls.Add(label6);
-        edicionGrupo.Controls.Add(textBox6);
+        edicionGrupo.Controls.Add(CodAreaText);
         edicionGrupo.Controls.Add(label5);
-        edicionGrupo.Controls.Add(textBox5);
+        edicionGrupo.Controls.Add(CodPaisText);
         edicionGrupo.Controls.Add(label4);
         edicionGrupo.Controls.Add(label3);
-        edicionGrupo.Controls.Add(textBox3);
+        edicionGrupo.Controls.Add(NombreText);
         edicionGrupo.Controls.Add(label2);
-        edicionGrupo.Controls.Add(textBox2);
+        edicionGrupo.Controls.Add(ApellidoText);
         edicionGrupo.Controls.Add(label1);
-        edicionGrupo.Controls.Add(textBox1);
+        edicionGrupo.Controls.Add(DNIText);
         edicionGrupo.Enabled = false;
         edicionGrupo.Location = new Point(12, 311);
         edicionGrupo.Name = "edicionGrupo";
@@ -82,32 +84,44 @@ partial class AbmPersonasForm
         edicionGrupo.TabIndex = 1;
         edicionGrupo.TabStop = false;
         // 
-        // button5
+        // aceptarModificar
         // 
-        button5.Location = new Point(596, 183);
-        button5.Name = "button5";
-        button5.Size = new Size(75, 31);
-        button5.TabIndex = 16;
-        button5.Text = "&Aceptar";
-        button5.UseVisualStyleBackColor = true;
+        aceptarModificar.Location = new Point(502, 183);
+        aceptarModificar.Name = "aceptarModificar";
+        aceptarModificar.Size = new Size(157, 31);
+        aceptarModificar.TabIndex = 17;
+        aceptarModificar.Text = "&Aceptar modificaciones";
+        aceptarModificar.UseVisualStyleBackColor = true;
+        aceptarModificar.Click += aceptarModificar_Click;
         // 
-        // button4
+        // aceptarBoton
         // 
-        button4.Location = new Point(677, 183);
-        button4.Name = "button4";
-        button4.Size = new Size(75, 31);
-        button4.TabIndex = 15;
-        button4.Text = "&Cancelar";
-        button4.UseVisualStyleBackColor = true;
+        aceptarBoton.Location = new Point(349, 183);
+        aceptarBoton.Name = "aceptarBoton";
+        aceptarBoton.Size = new Size(125, 31);
+        aceptarBoton.TabIndex = 16;
+        aceptarBoton.Text = "&Aceptar nueva";
+        aceptarBoton.UseVisualStyleBackColor = true;
+        aceptarBoton.Click += aceptarBoton_Click;
         // 
-        // comboBox1
+        // cancelarBoton
         // 
-        comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-        comboBox1.FormattingEnabled = true;
-        comboBox1.Location = new Point(19, 127);
-        comboBox1.Name = "comboBox1";
-        comboBox1.Size = new Size(241, 23);
-        comboBox1.TabIndex = 14;
+        cancelarBoton.Location = new Point(677, 183);
+        cancelarBoton.Name = "cancelarBoton";
+        cancelarBoton.Size = new Size(75, 31);
+        cancelarBoton.TabIndex = 15;
+        cancelarBoton.Text = "&Cancelar";
+        cancelarBoton.UseVisualStyleBackColor = true;
+        cancelarBoton.Click += cancelarBoton_Click;
+        // 
+        // TipoCelCombo
+        // 
+        TipoCelCombo.DropDownStyle = ComboBoxStyle.DropDownList;
+        TipoCelCombo.FormattingEnabled = true;
+        TipoCelCombo.Location = new Point(19, 127);
+        TipoCelCombo.Name = "TipoCelCombo";
+        TipoCelCombo.Size = new Size(241, 23);
+        TipoCelCombo.TabIndex = 14;
         // 
         // label7
         // 
@@ -118,12 +132,13 @@ partial class AbmPersonasForm
         label7.TabIndex = 13;
         label7.Text = "Número";
         // 
-        // textBox7
+        // NumeroText
         // 
-        textBox7.Location = new Point(460, 127);
-        textBox7.Name = "textBox7";
-        textBox7.Size = new Size(292, 23);
-        textBox7.TabIndex = 12;
+        NumeroText.Location = new Point(460, 127);
+        NumeroText.MaxLength = 8;
+        NumeroText.Name = "NumeroText";
+        NumeroText.Size = new Size(292, 23);
+        NumeroText.TabIndex = 12;
         // 
         // label6
         // 
@@ -134,12 +149,13 @@ partial class AbmPersonasForm
         label6.TabIndex = 11;
         label6.Text = "Cod. Area";
         // 
-        // textBox6
+        // CodAreaText
         // 
-        textBox6.Location = new Point(361, 127);
-        textBox6.Name = "textBox6";
-        textBox6.Size = new Size(93, 23);
-        textBox6.TabIndex = 10;
+        CodAreaText.Location = new Point(361, 127);
+        CodAreaText.MaxLength = 2;
+        CodAreaText.Name = "CodAreaText";
+        CodAreaText.Size = new Size(93, 23);
+        CodAreaText.TabIndex = 10;
         // 
         // label5
         // 
@@ -150,12 +166,13 @@ partial class AbmPersonasForm
         label5.TabIndex = 9;
         label5.Text = "Cod. Pais";
         // 
-        // textBox5
+        // CodPaisText
         // 
-        textBox5.Location = new Point(266, 127);
-        textBox5.Name = "textBox5";
-        textBox5.Size = new Size(89, 23);
-        textBox5.TabIndex = 8;
+        CodPaisText.Location = new Point(266, 127);
+        CodPaisText.MaxLength = 2;
+        CodPaisText.Name = "CodPaisText";
+        CodPaisText.Size = new Size(89, 23);
+        CodPaisText.TabIndex = 8;
         // 
         // label4
         // 
@@ -175,12 +192,13 @@ partial class AbmPersonasForm
         label3.TabIndex = 5;
         label3.Text = "Nombre";
         // 
-        // textBox3
+        // NombreText
         // 
-        textBox3.Location = new Point(534, 63);
-        textBox3.Name = "textBox3";
-        textBox3.Size = new Size(218, 23);
-        textBox3.TabIndex = 4;
+        NombreText.Location = new Point(534, 63);
+        NombreText.MaxLength = 30;
+        NombreText.Name = "NombreText";
+        NombreText.Size = new Size(218, 23);
+        NombreText.TabIndex = 4;
         // 
         // label2
         // 
@@ -191,12 +209,13 @@ partial class AbmPersonasForm
         label2.TabIndex = 3;
         label2.Text = "Apellido";
         // 
-        // textBox2
+        // ApellidoText
         // 
-        textBox2.Location = new Point(266, 63);
-        textBox2.Name = "textBox2";
-        textBox2.Size = new Size(262, 23);
-        textBox2.TabIndex = 2;
+        ApellidoText.Location = new Point(266, 63);
+        ApellidoText.MaxLength = 30;
+        ApellidoText.Name = "ApellidoText";
+        ApellidoText.Size = new Size(262, 23);
+        ApellidoText.TabIndex = 2;
         // 
         // label1
         // 
@@ -207,12 +226,13 @@ partial class AbmPersonasForm
         label1.TabIndex = 1;
         label1.Text = "Documento";
         // 
-        // textBox1
+        // DNIText
         // 
-        textBox1.Location = new Point(19, 63);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new Size(241, 23);
-        textBox1.TabIndex = 0;
+        DNIText.Location = new Point(19, 63);
+        DNIText.MaxLength = 8;
+        DNIText.Name = "DNIText";
+        DNIText.Size = new Size(241, 23);
+        DNIText.TabIndex = 0;
         // 
         // listaGrupo
         // 
@@ -235,6 +255,7 @@ partial class AbmPersonasForm
         modificarBoton.TabIndex = 8;
         modificarBoton.Text = "&Modificar seleccionada";
         modificarBoton.UseVisualStyleBackColor = true;
+        modificarBoton.Click += modificarBoton_Click;
         // 
         // borrarBoton
         // 
@@ -254,11 +275,14 @@ partial class AbmPersonasForm
         nuevaBoton.TabIndex = 6;
         nuevaBoton.Text = "&Nueva";
         nuevaBoton.UseVisualStyleBackColor = true;
+        nuevaBoton.Click += nuevaBoton_Click;
         // 
         // personasLista
         // 
         personasLista.Columns.AddRange(new ColumnHeader[] { dniColumna, nombreColumna, apellidoColumna });
+        personasLista.FullRowSelect = true;
         personasLista.Location = new Point(6, 22);
+        personasLista.MultiSelect = false;
         personasLista.Name = "personasLista";
         personasLista.Size = new Size(764, 219);
         personasLista.TabIndex = 5;
@@ -284,6 +308,7 @@ partial class AbmPersonasForm
         ClientSize = new Size(800, 584);
         Controls.Add(listaGrupo);
         Controls.Add(edicionGrupo);
+        FormBorderStyle = FormBorderStyle.FixedDialog;
         Name = "AbmPersonasForm";
         Text = "Alta de personas";
         Load += AbmPersonasForm_Load;
@@ -296,21 +321,21 @@ partial class AbmPersonasForm
     #endregion
     private GroupBox edicionGrupo;
     private Label label6;
-    private TextBox textBox6;
+    private TextBox CodAreaText;
     private Label label5;
-    private TextBox textBox5;
+    private TextBox CodPaisText;
     private Label label4;
     private Label label3;
-    private TextBox textBox3;
+    private TextBox NombreText;
     private Label label2;
-    private TextBox textBox2;
+    private TextBox ApellidoText;
     private Label label1;
-    private TextBox textBox1;
+    private TextBox DNIText;
     private Label label7;
-    private TextBox textBox7;
-    private ComboBox comboBox1;
-    private Button button5;
-    private Button button4;
+    private TextBox NumeroText;
+    private ComboBox TipoCelCombo;
+    private Button aceptarBoton;
+    private Button cancelarBoton;
     private GroupBox listaGrupo;
     private Button modificarBoton;
     private Button borrarBoton;
@@ -319,4 +344,5 @@ partial class AbmPersonasForm
     private ColumnHeader dniColumna;
     private ColumnHeader nombreColumna;
     private ColumnHeader apellidoColumna;
+    private Button aceptarModificar;
 }
