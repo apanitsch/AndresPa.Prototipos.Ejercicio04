@@ -69,6 +69,8 @@ internal class AbmPersonasModel
                 return null;
             }
         }
+
+        return "No se encuentra a la persona.";
     }
 
     internal string NuevaPersona(Persona persona)
